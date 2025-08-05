@@ -20,12 +20,7 @@ function refresh(search) {
     pages = [];
 
     if (search) {
-       displayedItems = displayedItems.filter((item) => {
-            const res = item.name.search(search) != -1;
-            if (res)
-                console.log(res, item.name, '|', search)
-            return res
-        });
+        displayedItems = displayedItems.filter((item) => (`name=${item.name};uid=${item.UID};model=${item.model}`).toLowerCase().search(search.toLowerCase()) != -1);
         activePage = 0;
     }
     
@@ -48,8 +43,8 @@ function refresh(search) {
     }
 
     for (var i = 0; i <= pages[activePage].length - 1; i++) {
-        const item = pages[activePage][i]
-        if (!item) console.log(item, pages[activePage].length)
+        const item = pages[activePage][i];
+        if (!item) continue
         list.innerHTML += `
             <div class="item">
                 <img src="https://cdn.azresources.cloud/projects/arizona-rp/assets/images/donate/${item?.preview?.img ?? 1}.png">
@@ -61,6 +56,7 @@ function refresh(search) {
             </div>
         `
     }
+    document.getElementById('total-items').textContent = displayedItems.length;
 }
 
 function setPage(page) {
