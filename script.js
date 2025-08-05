@@ -2,12 +2,17 @@ var itemsList = [];
 var displayedItems = [];
 var activePage = 0;
 var pages = [];
-
-const ITEMS_ON_PAGE = 90;
+var itemsOnPage = 90;
 
 addEventListener('DOMContentLoaded', async () => {
     const search = document.getElementById('search');
     search.addEventListener('input', () => refresh(search.value));
+
+    const itemsOnPageSelector = document.getElementById('items-on-page');
+    itemsOnPageSelector.addEventListener('change', () => {
+        itemsOnPage = +itemsOnPageSelector.value;
+        refresh();
+    });
     const response = await fetch('https://raw.githubusercontent.com/vAcs-reborn/info/refs/heads/main/items.json');
     if (response.status) {
         itemsList = JSON.parse(await response.text());
@@ -25,7 +30,7 @@ function refresh(search) {
     }
     
     for (var i = 0; i <= displayedItems.length; i++) {
-        const pageIndex = Math.floor(i / ITEMS_ON_PAGE);
+        const pageIndex = Math.floor(i / itemsOnPage);
         if (!pages[pageIndex])
             pages[pageIndex] = [];
         pages[pageIndex].push(displayedItems[i]);
