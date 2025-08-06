@@ -3,31 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vAcs items</title>
-    <link rel="stylesheet" href="style.css">
+    <title>vAcs</title>
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    <script src="script.js"></script>
     <div class="header">
-        <div class="logo">
-            <img src="./logo.png">
-            <div class="title">
-                <p><b>vAcs</b> // Items List</p>
-                <!-- <b>Total items:<b id="total-items">0</b></b> -->
-            </div>
+        <img src="assets/logo.png">
+        <b>vAcs // Reborn</b>
+    </div>
+    <div class="container">
+        <div class="version-info">
+            <b>Last version: <a>5.0.0-alpha</a></b>
         </div>
-        <input type="text" placeholder="Search: Name / Model ID / UID (Unique ID)" id="search">
+        <button onclick="window.location.href = './public/items.html'">Items List</button>
+        <button onclick="window.location.href = './public/statistics.html'">Sync Statistics</button>
     </div>
-    <div class="actions">
-        <b>Items: <a id="total-items"></a></b>
-        <div class="page-container" id="pagelist"></div>
-        <select name="items on page" id="items-on-page">
-            <option value="50">50</option>
-            <option value="100">100</option>
-            <option value="150">150</option>
-            <option value="200">200</option>
-        </select>
-    </div>
-    <div class="items-container" id="list"></div>
 </body>
 </html>

@@ -1,0 +1,48 @@
+/* 272727 */
+/* 171717 */
+.list {
+    /* background-color: red; */
+    margin: 15px;
+}
+
+.server {
+    padding: 10px;
+    background-color: #171717;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.server h3 {
+    margin: 10px;
+}
+
+.player {
+    padding: 10px;
+    background-color: #272727;
+}
+
+.slots {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.slot {
+    background-color: #171717;
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.slot img {
+    position: absolute;
+    height: 64px;
+    width: 64px;
+}
+
+.slot p {
+    margin: 5px;
+}

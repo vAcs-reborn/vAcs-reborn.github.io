@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vAcs items</title>
+    <link rel="stylesheet" href="../style/items.css">
+     <!-- <link rel="icon" type="image/x-icon" href="logo.png"> -->
+</head>
+<body>
+    <script src="../script/items.js"></script>
+    <div class="darkening"></div>
+    <div class="header">
+        <div class="logo">
+            <img src="../assets/logo.png" onclick="window.location.href = '../index.html'">
+            <div class="title">
+                <p><b>vAcs</b> // Items List</p>
+                <!-- <b>Total items:<b id="total-items">0</b></b> -->
+            </div>
+        </div>
+        <input type="text" placeholder="Search: Name / Model ID / UID (Unique ID)" id="search">
+    </div>
+    <div class="actions">
+        <b>Items: <a id="total-items"></a></b>
+        <div class="page-container" id="pagelist"></div>
+        <select name="items on page" id="items-on-page">
+            <option value="100">100</option>
+            <option value="150">150</option>
+            <option value="200">200</option>
+        </select>
+    </div>
+    <div class="items-container" id="list"></div>
+    <dialog class="item-dialog">
+        <img id="item-dialog-img" src="./logo.png">
+        <div class="item-dialog-info-container">
+            <div class="line">
+                <b id="item-dialog-name">temasdasdasdasdasdasdasdasdasdasd</b>
+            </div>
+            
+            <div class="line">
+                <p><b>Unique ID:</b> <a>10000</a></p>
+            </div>
+            <div class="line">
+                <p><b>Model ID:</b> <a>10000</a></p>
+            </div>
+        </div>        
+    </dialog>
+</body>
+</html>
