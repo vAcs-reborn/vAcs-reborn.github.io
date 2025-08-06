@@ -29,7 +29,14 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 5px;
-    border-style: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    transition: .2s all ease-in;
+}
+
+.page-container button:hover {
+    border-color: whitesmoke;
 }
 
 .page-container button.page-btn-active {
@@ -67,6 +74,10 @@ body {
     background-color: #181818;
     border-style: none;
     border-radius: 5px;
+}
+
+.actions select {
+    height: 30px;
 }
 
 .header input {
